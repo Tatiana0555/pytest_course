@@ -16,8 +16,9 @@ def test_add_item_in_the_cart():
     login_button = driver.find_element(By.XPATH, '//input[@data-test="login-button"]')
     login_button.click()
 
-    text_before = driver.find_element(By.CSS_SELECTOR, "a[id='item_4_title_link'] > div[class='inventory_item_name ']").text
-    # text_before = driver.find_element(By.CSS_SELECTOR, 'a//div[contains(text(), "Sauce Labs Backpack")]').text
+    # text_before = driver.find_element(By.CSS_SELECTOR, "a[id='item_4_title_link'] > div[class='inventory_item_name ']").text
+    # второй вариант через XPATH:
+    text_before = driver.find_element(By.XPATH, '//div[contains(text(), "Sauce Labs Backpack")]').text
 
     button = driver.find_element(By.CSS_SELECTOR, "button[data-test='add-to-cart-sauce-labs-backpack']")
     button.click()
@@ -29,8 +30,9 @@ def test_add_item_in_the_cart():
     # text_after = driver.find_element(By.CSS_SELECTOR, "a[id='item_4_title_link'] > div[class='inventory_item_name ']").text
 
     # text_after = driver.find_element(By.CSS_SELECTOR, '//div[contains(text(), "Sauce Labs Backpack")]').text
+    text_after = driver.find_element(By.XPATH, '//div[contains(text(), "Sauce Labs Backpack")]').text
 
     # time.sleep(3)
 
-    # assert text_before == text_after
+    assert text_before == text_after
     # time.sleep(3)
