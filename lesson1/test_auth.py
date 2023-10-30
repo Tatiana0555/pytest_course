@@ -1,9 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time 
+import time
 
 driver = webdriver.Chrome()
-
 
 
 def test_login_form():
@@ -11,6 +10,25 @@ def test_login_form():
 
     username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
     username_field.send_keys("standard_user")
+
+    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
+    # username_field.send_keys("user")
+
+    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
+    # username_field.send_keys("locked_out_user")
+
+    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
+    # username_field.send_keys("problem_user")
+
+    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
+    # username_field.send_keys("error_user")
+
+    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
+    # username_field.send_keys("performance_glitch_user")
+
+    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
+    # username_field.send_keys("visual_user")
+
 
     password_field = driver.find_element(By.XPATH, '//input[@data-test="password"]')
     password_field.send_keys("secret_sauce")
@@ -22,13 +40,3 @@ def test_login_form():
     assert driver.current_url == "https://www.saucedemo.com/inventory.html"
 
     driver.quit()
-
-
-
-
-
-
-
-
-
-
