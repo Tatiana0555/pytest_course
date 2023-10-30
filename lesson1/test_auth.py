@@ -11,25 +11,6 @@ def test_login_form():
     username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
     username_field.send_keys("standard_user")
 
-    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
-    # username_field.send_keys("user")
-
-    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
-    # username_field.send_keys("locked_out_user")
-
-    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
-    # username_field.send_keys("problem_user")
-
-    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
-    # username_field.send_keys("error_user")
-
-    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
-    # username_field.send_keys("performance_glitch_user")
-
-    # username_field = driver.find_element(By.XPATH, '//input[@data-test="username"]')
-    # username_field.send_keys("visual_user")
-
-
     password_field = driver.find_element(By.XPATH, '//input[@data-test="password"]')
     password_field.send_keys("secret_sauce")
 
